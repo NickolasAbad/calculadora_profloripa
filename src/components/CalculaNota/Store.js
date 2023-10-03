@@ -69,7 +69,11 @@ class Store {
         
                 for (let b = 0; b < NP.length; b++) {       
                     if(NPC[b] > NPI[b]) {
-                        valorNota.push(parseFloat((((NP[b] - (NTPC[b] - (NPC[b] - NPI[b]))) / NP[b])).toFixed(2)))
+                        if (isNaN(parseFloat((((NP[b] - (NTPC[b] - (NPC[b] - NPI[b]))) / NP[b])).toFixed(2)))) {
+                            valorNota.push(0)
+                        } else {
+                            valorNota.push(parseFloat((((NP[b] - (NTPC[b] - (NPC[b] - NPI[b]))) / NP[b])).toFixed(2)))
+                        }
                     } else {
                         valorNota.push(0)
                     }

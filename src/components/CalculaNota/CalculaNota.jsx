@@ -282,7 +282,7 @@ const CalculaNota = observer((props) => {
                                     <Row>
                                         <Col>
                                         <br />
-                                            <h5>Pontuação: {props.store.notasQ[idx].toFixed(2)} de 1.00</h5>
+                                            <h5>Pontuação: {props.store.notasQ[idx] === undefined || NaN ? '0.00' : props.store.notasQ[idx].toFixed(2)} de 1.00</h5>
                                         </Col>
                                     </Row> 
                                 : null}
