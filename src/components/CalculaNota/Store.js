@@ -3,6 +3,7 @@ import { makeObservable, observable, action } from 'mobx'
 class Store {
     nota = 0;
     notasQ = [0];
+    notasPesadas = 0;
     NPC = [];
     NPI = [];
     NTPC = [];
@@ -11,10 +12,12 @@ class Store {
         makeObservable(this, {
             nota: observable,
             notasQ: observable,
+            notasPesadas: observable,
             NPC: observable,
             NPI: observable,
             NTPC: observable,
             calcula: action,
+            calculaNotaFinal: action,
             reseta: action,
         })
 
@@ -94,9 +97,36 @@ class Store {
         this.notasQ = (valorNota);
         this.nota = parseFloat(notasReunidas).toFixed(2);
     }
+    calculaNotaFinal = (nPTG, 
+        nLLE, 
+        nMTM, 
+        nBLG, 
+        nCHS, 
+        nFSC, 
+        nQMC, 
+        nDSC, 
+        nRDC, 
+        pPTG, 
+        pLLE, 
+        pMTM, 
+        pBLG, 
+        pCHS, 
+        pFSC, 
+        pQMC, 
+        pDSC, 
+        pRDC, 
+        PMC) => {
+
+            let notasreunidas = 0;
+            notasreunidas = ((nPTG * pPTG) + (nLLE * pLLE) + (nMTM * pMTM) + (nBLG * pBLG) + (nCHS * pCHS) + (nFSC * pFSC) + (nQMC * pQMC) + (nDSC * pDSC) + (nRDC * pRDC))
+
+            this.notasPesadas = ((100 * notasreunidas) / PMC).toFixed(2)
+
+    }
 
     reseta = () => {
         this.calcula(0, 0, 0)
+        this.calculaNotaFinal(0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0)
 
         this.nota = 0;
         this.notasQ = null;
