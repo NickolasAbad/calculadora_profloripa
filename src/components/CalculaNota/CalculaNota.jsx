@@ -621,7 +621,7 @@ const CalculaNota = observer((props) => {
                         <Button type="submit" className="mt-3 mb-5">Calcular</Button>
                     </Form>
                         <ToastContainer
-                            className="p-3 position-fixed mt-5 z-4"
+                            className="p-4 position-fixed mt-5 z-4"
                             position={position}
                             style={{ zIndex: 100000000 }} hidden={toastHidden || showPesos}>
                             <Toast onClose={() => setToastHidden(true)} id="toast">
