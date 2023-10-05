@@ -208,7 +208,7 @@ const CalculaNota = observer((props) => {
                         <br />
                         NPI – Número de proposições incorretas consideradas corretas pelo candidato
                         <hr />
-                        <b className="text-center">Para continuarmos, caso voce deseja corrigir sua prova da UFSC, clique no botao abaixo, caso queira corrigir um simulado, insira o número de questões à serem corrigidas.</b>
+                        <b className="text-center">Para continuarmos, caso voce deseja corrigir sua prova da UFSC, clique no botão abaixo. Caso queira corrigir um simulado, insira o número de questões a serem corrigidas.</b>
                         <br />
                         <br />
                         <Form.Group className="d-flex gap-2 align-items-center justify-content-center">
