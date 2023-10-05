@@ -304,7 +304,7 @@ const CalculaNota = observer((props) => {
                                     <Col lg={3} className={"mb-3"}>
                                         <InputGroup hasValidation>
                                             <InputGroup.Text id="inputGroup-portugues">Português</InputGroup.Text>
-                                            <Form.Control placeholder="PTG" value={notaPTG} step=".01" aria-label="Português" aria-describedby="inputGroup-portugues" required type="number" max={12} min={0} inputMode="numeric"/>
+                                            <Form.Control placeholder="PTG" defaultValue={notaPTG} step=".01" aria-label="Português" aria-describedby="inputGroup-portugues" required type="number" max={12} min={0} inputMode="numeric"/>
                                             <Form.Control.Feedback type="invalid">
                                                 Por favor, insira um número entre 0 e 12
                                             </Form.Control.Feedback>
@@ -313,7 +313,7 @@ const CalculaNota = observer((props) => {
                                     <Col lg={4} className={"mb-3"}>
                                         <InputGroup hasValidation>
                                             <InputGroup.Text id="inputGroup-slingua">Segunda Língua</InputGroup.Text>
-                                            <Form.Control placeholder="LLE" value={notaLLE} step=".01" aria-label="Segunda Língua" aria-describedby="inputGroup-slingua" required type="number" max={8} min={0} inputMode="numeric"/>
+                                            <Form.Control placeholder="LLE" defaultValue={notaLLE} step=".01" aria-label="Segunda Língua" aria-describedby="inputGroup-slingua" required type="number" max={8} min={0} inputMode="numeric"/>
                                             <Form.Control.Feedback type="invalid">
                                                 Por favor, insira um número entre 0 e 8
                                             </Form.Control.Feedback>
@@ -322,7 +322,7 @@ const CalculaNota = observer((props) => {
                                     <Col lg={3} className={"mb-3"}>
                                         <InputGroup hasValidation>
                                             <InputGroup.Text id="inputGroup-matematica">Matemática</InputGroup.Text>
-                                            <Form.Control placeholder="MTM" value={notaMTM} step=".01" aria-label="Matemática" aria-describedby="inputGroup-matematica" required type="number" max={10} min={0} inputMode="numeric"/>
+                                            <Form.Control placeholder="MTM" defaultValue={notaMTM} step=".01" aria-label="Matemática" aria-describedby="inputGroup-matematica" required type="number" max={10} min={0} inputMode="numeric"/>
                                             <Form.Control.Feedback type="invalid">
                                                 Por favor, insira um número entre 0 e 10
                                             </Form.Control.Feedback>
@@ -333,7 +333,7 @@ const CalculaNota = observer((props) => {
                                     <Col lg={3} className={"mb-3"}>
                                         <InputGroup hasValidation>
                                             <InputGroup.Text id="inputGroup-biologia">Biologia</InputGroup.Text>
-                                            <Form.Control placeholder="BLG" value={notaBLG} step=".01" aria-label="Biologia" aria-describedby="inputGroup-biologia" required type="number" max={10} min={0} inputMode="numeric"/>
+                                            <Form.Control placeholder="BLG" defaultValue={notaBLG} step=".01" aria-label="Biologia" aria-describedby="inputGroup-biologia" required type="number" max={10} min={0} inputMode="numeric"/>
                                             <Form.Control.Feedback type="invalid">
                                                 Por favor, insira um número entre 0 e 10
                                             </Form.Control.Feedback>
@@ -342,7 +342,7 @@ const CalculaNota = observer((props) => {
                                     <Col lg={4} className={"mb-3"}>
                                         <InputGroup hasValidation>
                                             <InputGroup.Text id="inputGroup-chs">Ciências H. S.</InputGroup.Text>
-                                            <Form.Control placeholder="CHS" value={notaCHS} step=".01" aria-label="Ciências H. S." aria-describedby="inputGroup-chs" required type="number" max={20} min={0} inputMode="numeric"/>
+                                            <Form.Control placeholder="CHS" defaultValue={notaCHS} step=".01" aria-label="Ciências H. S." aria-describedby="inputGroup-chs" required type="number" max={20} min={0} inputMode="numeric"/>
                                             <Form.Control.Feedback type="invalid">
                                                 Por favor, insira um número entre 0 e 20
                                             </Form.Control.Feedback>
@@ -351,7 +351,7 @@ const CalculaNota = observer((props) => {
                                     <Col lg={3} className={"mb-3"}>
                                         <InputGroup hasValidation>
                                             <InputGroup.Text id="inputGroup-fisica">Física</InputGroup.Text>
-                                            <Form.Control placeholder="FSC" value={notaFSC} step=".01" aria-label="Física" aria-describedby="inputGroup-fisica" required type="number" max={10} min={0} inputMode="numeric"/>
+                                            <Form.Control placeholder="FSC" defaultValue={notaFSC} step=".01" aria-label="Física" aria-describedby="inputGroup-fisica" required type="number" max={10} min={0} inputMode="numeric"/>
                                             <Form.Control.Feedback type="invalid">
                                                 Por favor, insira um número entre 0 e 10
                                             </Form.Control.Feedback>
@@ -362,7 +362,7 @@ const CalculaNota = observer((props) => {
                                     <Col lg={3} className={"mb-3"}>
                                         <InputGroup hasValidation>
                                             <InputGroup.Text id="inputGroup-quimica">Química</InputGroup.Text>
-                                            <Form.Control placeholder="QMC" value={notaQMC} step=".01" aria-label="Química" aria-describedby="inputGroup-quimica" required type="number" max={10} min={0} inputMode="numeric"/>
+                                            <Form.Control placeholder="QMC" defaultValue={notaQMC} step=".01" aria-label="Química" aria-describedby="inputGroup-quimica" required type="number" max={10} min={0} inputMode="numeric"/>
                                             <Form.Control.Feedback type="invalid">
                                                 Por favor, insira um número entre 0 e 10
                                             </Form.Control.Feedback>
