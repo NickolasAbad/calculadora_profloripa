@@ -69,18 +69,24 @@ class Store {
 
             const valorInicial = 0;
 
-        
-                for (let b = 0; b < NP.length; b++) {       
-                    if(NPC[b] > NPI[b]) {
-                        if (isNaN(parseFloat((((NP[b] - (NTPC[b] - (NPC[b] - NPI[b]))) / NP[b])).toFixed(2)))) {
-                            valorNota.push(0)
-                        } else {
-                            valorNota.push(parseFloat((((NP[b] - (NTPC[b] - (NPC[b] - NPI[b]))) / NP[b])).toFixed(2)))
-                        }
-                    } else {
-                        valorNota.push(0)
-                    }
+				if(NP === 8 && gabaritoCandi === gabaritoQuest) {
+                    valorNota.push(1)
+                } else if (NP === 8 && gabaritoCandi !== gabaritoQuest) {
+                    valorNota.push(0)
+                } else {
+                	for (let b = 0; b < NP.length; b++) {       
+                    	if(NPC[b] > NPI[b]) {
+                        	if (isNaN(parseFloat((((NP[b] - (NTPC[b] - (NPC[b] - NPI[b]))) / NP[b])).toFixed(2)))) {
+                            	valorNota.push(0)
+                    	 	} else {
+                            	valorNota.push(parseFloat((((NP[b] - (NTPC[b] - (NPC[b] - NPI[b]))) / NP[b])).toFixed(2)))
+                        	}
+                    	} else {
+                        	valorNota.push(0)
+                    	}
+            	}
             }
+            
             notasReunidas = parseFloat(valorNota.reduce(
                 (accumulator, currentValue) => accumulator + currentValue,
                 valorInicial
