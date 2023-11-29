@@ -569,7 +569,7 @@ const CalculaNota = observer((props) => {
                                                         required
                                                         defaultValue={0}
                                                         inputMode="numeric"
-                                                        min={1}
+                                                        min={0}
                                                         max={99}
                                                         onBlur={e => {
                                                             let formId = idx;
@@ -578,7 +578,7 @@ const CalculaNota = observer((props) => {
                                                             setGabaritoC(newGabaritoC);
                                                         } } />
                                                     <Form.Control.Feedback type="invalid">
-                                                        Por favor, insira um número entre 1 e 99
+                                                        Por favor, insira um número entre 0 e 99
                                                     </Form.Control.Feedback>
                                                 </InputGroup>
                                             </Col>
@@ -600,6 +600,7 @@ const CalculaNota = observer((props) => {
                                                         <option value={5}>16</option>
                                                         <option value={6}>32</option>
                                                         <option value={7}>64</option>
+                                                        <option value={8}>Aberta</option>
                                                     </Form.Select>
 
                                                     <Form.Control.Feedback type="invalid">
