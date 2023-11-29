@@ -65,7 +65,7 @@ class Store {
             } 
         }
 
-        function calcularPontuacao(NP, NTPC, NPC, NPI) {
+        function calcularPontuacao(NP, NTPC, NPC, NPI, gabaritoCandi, gabaritoQuest) {
 
             const valorInicial = 0;
 
@@ -99,7 +99,7 @@ class Store {
         this.NPI = valorNPI;
         this.NTPC = valorNTPC;
 
-        calcularPontuacao(NumeroPreposicoes, this.NTPC, this.NPC, this.NPI)
+        calcularPontuacao(NumeroPreposicoes, this.NTPC, this.NPC, this.NPI, gabaritoCandi, gabaritoQuest)
         this.notasQ = (valorNota);
         this.nota = parseFloat(notasReunidas).toFixed(2);
     }
