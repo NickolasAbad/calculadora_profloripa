@@ -257,15 +257,15 @@ const CalculaNota = observer((props) => {
                             <Navbar.Toggle />
                             <Navbar.Collapse className="justify-content-end">
                                 <Navbar.Text hidden={!UFSC} className="me-2">
-                                    <OverlayTrigger
-                                        placement="bottom"
-                                        overlay={<Tooltip id="button-tooltip-2">Calcule sua nota primeiro antes de calcular os pesos</Tooltip>}
-                                    >
                                         <Button variant="light" className="ms-auto" onClick={handleShowPesos} disabled={toastHidden}>
-                                            <a className="text-decoration-none"><Navbar.Brand className="text-warning fw-bold">Pesos</Navbar.Brand></a>
-                                            <BsFillCalculatorFill className="text-dark mb-1" />
+                                            <OverlayTrigger
+                                                placement="bottom"
+                                                overlay={<Tooltip id="button-tooltip-2">Calcule sua nota primeiro antes de calcular os pesos</Tooltip>}
+                                            >
+                                                <a className="text-decoration-none"><Navbar.Brand className="text-warning fw-bold">Pesos</Navbar.Brand></a>
+                                                <BsFillCalculatorFill className="text-dark mb-1" />
+                                            </OverlayTrigger >
                                         </Button>
-                                    </OverlayTrigger >
                                 </Navbar.Text>
                                 <Navbar.Text>
                                     <Button variant="light" className="ms-auto" onClick={handleShow}>
