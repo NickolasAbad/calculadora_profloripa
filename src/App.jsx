@@ -4,14 +4,11 @@ import store from './components/CalculaNota/Store'
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-import { Analytics } from '@vercel/analytics/react';
-
 function App() {
 
     return (
         <>
             <CalculaNota store={store} />
-            <Analytics />
         </>
     )
 }

@@ -4,6 +4,8 @@ import { observer } from 'mobx-react-lite'
 import { VscSettingsGear } from 'react-icons/vsc'
 import { BsFillCalculatorFill } from 'react-icons/bs'
 
+import { Analytics } from '@vercel/analytics/react';
+
 const CalculaNota = observer((props) => {
     const formRef = useRef(null)
 
@@ -647,6 +649,7 @@ const CalculaNota = observer((props) => {
                         </Container>
                     </footer>
                 }
+            <Analytics />
         </>
     )
 })
