@@ -1,10 +1,16 @@
-import { useRef, useState } from "react"
+import { useRef, useState, useEffect } from "react"
 import { Form, Button, Container, Row, Col, Modal, InputGroup, Navbar, Toast, ToastContainer, Alert } from 'react-bootstrap';
 import { observer } from 'mobx-react-lite'
 import { VscSettingsGear } from 'react-icons/vsc'
 import { BsFillCalculatorFill } from 'react-icons/bs'
+import ReactGA from "react-ga";
 
 const CalculaNota = observer((props) => {
+
+    useEffect(() => {
+      ReactGA.pageview(window.location.pathname)
+    }, []);
+
     const formRef = useRef(null)
 
     const [NP, setNP] = useState([]);
@@ -62,16 +68,16 @@ const CalculaNota = observer((props) => {
         setNotaQMC(resultadoNotaMateria(70, 80).toFixed(2))
         setShowPesos(true)
     };
-
+    
     const [showInitial, setShowInitial] = useState(true);
     const handleCloseInitial = () => setShowInitial(false);
-
+    
     const [validations, setValidations] = useState(new Array(questoes.length).fill(false));
-
+    
     const handleModalQuestoes = (e) => {
         setModalQuestoes(e.target.value)
     }
-
+    
     const handleSubmit = (e) => {
         const isFormValid = validations.every(validation => validation === true);
         
@@ -86,9 +92,15 @@ const CalculaNota = observer((props) => {
         if (form.checkValidity() === false) {
             e.stopPropagation();
         } else {
-            props.store.calcula(NP, gabaritoQ, gabaritoC)
+            let notaCalculadaV2 = props.store.calcula(NP, gabaritoQ, gabaritoC)
+            notaCalculadaV2
             setToastHidden(false)
             window.scrollTo({top: 0, behavior: 'smooth'})
+            ReactGA.event({
+                category: "Notas",
+                action: "Calcular nota",
+                value: notaCalculadaV2
+            })
         }
     }
 
@@ -173,6 +185,7 @@ const CalculaNota = observer((props) => {
         handleClose()
         handleCloseInitial()
       }
+
     
     return (
         <>
