@@ -1,5 +1,5 @@
 import { useRef, useState, useEffect } from "react"
-import { Form, Button, Container, Row, Col, Modal, InputGroup, Navbar, Toast, ToastContainer, Alert, OverlayTrigger, Tooltip  } from 'react-bootstrap';
+import { Form, Button, Container, Row, Col, Modal, InputGroup, Navbar, Toast, ToastContainer, Alert} from 'react-bootstrap';
 import { observer } from 'mobx-react-lite'
 import { VscSettingsGear } from 'react-icons/vsc'
 import { BsFillCalculatorFill } from 'react-icons/bs'
@@ -257,17 +257,10 @@ const CalculaNota = observer((props) => {
                             <Navbar.Toggle />
                             <Navbar.Collapse className="justify-content-end">
                                 <Navbar.Text hidden={!UFSC} className="me-2">
-                                        <Button variant="light" className="ms-auto" onClick={handleShowPesos} disabled={toastHidden}>
-                                            <OverlayTrigger
-                                                placement="bottom"
-                                                overlay={<Tooltip id="button-tooltip-2">Calcule sua nota primeiro antes de calcular os pesos</Tooltip>}
-                                            >
-                                                <>                                                
-                                                    <a className="text-decoration-none"><Navbar.Brand className="text-warning fw-bold">Pesos</Navbar.Brand></a>
-                                                    <BsFillCalculatorFill className="text-dark mb-1" />
-                                                </>
-                                            </OverlayTrigger >
-                                        </Button>
+                                    <Button variant="light" className="ms-auto" onClick={handleShowPesos} disabled={toastHidden}>                                          
+                                        <a className="text-decoration-none" data-toggle="tooltip" data-placement="bottom" title="Calcule sua nota primeiro antes de calcular os pesos"><Navbar.Brand className="text-warning fw-bold">Pesos</Navbar.Brand></a>
+                                        <BsFillCalculatorFill className="text-dark mb-1" />
+                                    </Button>
                                 </Navbar.Text>
                                 <Navbar.Text>
                                     <Button variant="light" className="ms-auto" onClick={handleShow}>
