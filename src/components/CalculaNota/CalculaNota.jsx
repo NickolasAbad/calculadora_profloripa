@@ -258,7 +258,7 @@ const CalculaNota = observer((props) => {
                             <Navbar.Collapse className="justify-content-end">
                                 <Navbar.Text hidden={!UFSC} className="me-2">
                                     <Button data-toggle="tooltip" data-placement="bottom" title="Calcule sua nota primeiro antes de calcular os pesos" variant="light" className="ms-auto" onClick={handleShowPesos} disabled={toastHidden}>                                          
-                                        <a className="text-decoration-none"><Navbar.Brand className="text-warning fw-bold">Pesos</Navbar.Brand></a>
+                                        <a className="text-decoration-none" title="Calcule sua nota primeiro antes de calcular os pesos"><Navbar.Brand className="text-warning fw-bold">Pesos</Navbar.Brand></a>
                                         <BsFillCalculatorFill className="text-dark mb-1" />
                                     </Button>
                                 </Navbar.Text>
