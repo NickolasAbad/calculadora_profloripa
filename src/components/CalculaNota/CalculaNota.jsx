@@ -9,7 +9,7 @@ const CalculaNota = observer((props) => {
 
     useEffect(() => {
       ReactGA.send({ hitType: "pageview", page: window.location.pathname});
-    }, []);
+    });
 
     const formRef = useRef(null)
 
