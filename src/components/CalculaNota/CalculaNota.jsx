@@ -3,7 +3,7 @@ import { Form, Button, Container, Row, Col, Modal, InputGroup, Navbar, Toast, To
 import { observer } from 'mobx-react-lite'
 import { VscSettingsGear } from 'react-icons/vsc'
 import { BsFillCalculatorFill } from 'react-icons/bs'
-import ReactGA from "react-ga";
+import ReactGA from "react-ga4";
 
 const CalculaNota = observer((props) => {
 
