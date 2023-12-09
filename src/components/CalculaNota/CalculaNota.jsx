@@ -8,7 +8,7 @@ import ReactGA from "react-ga4";
 const CalculaNota = observer((props) => {
 
     useEffect(() => {
-      ReactGA.pageview(window.location.pathname)
+      ReactGA.send({ hitType: "pageview", page: window.location.pathname});
     }, []);
 
     const formRef = useRef(null)
