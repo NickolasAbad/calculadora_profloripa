@@ -13,16 +13,6 @@ function App() {
 
     return (
         <>
-            <head>
-            <script async src="https://www.googletagmanager.com/gtag/js?id=G-G9K4133B64"></script>
-            <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments)}
-            gtag('js', new Date());
-
-            gtag('config', 'G-G9K4133B64');
-            </script>
-            </head>
             <CalculaNota store={store} />
         </>
     )
