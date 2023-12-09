@@ -14,7 +14,6 @@ function App() {
     return (
         <>
             <CalculaNota store={store} />
-            <Analytics />
         </>
     )
 }
